@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/inscripciones.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Inscripciones</title>
+</head>
+<body>
+    <div class="menu">
+        <button id="btnInscripciones">Inscripciones</button>
+        <button id="btnAsignaciones">Asignaciones</button>
+        <button id="btnColegiaturas">Colegiaturas</button>
+    </div>
+    <form method="POST" action="/admin/inscripciones">
+        <div id="formAsignaciones" class="form-container" style="display: none">
+            <!-- Formulario de Asignaciones -->
+            <h3>Asignaciones</h3>
+
+            <label for="id_alumno">Alumno</label>
+            <select name="id_alumno_asign" id="id_alumno">
+                <option value="" disabled selected>Alumnos</option>
+                {% for alumno in alumnos %}
+                    <option value="{{ alumno.id_alumno }} ">{{alumno.nombre}}  {{alumno.id_alumno}}</option>
+                {% endfor %}                
+            </select>
+
+            <label for="id_curso">Curso</label>
+            <select name="id_curso" id="id_curso">
+                <option value="" disabled selected>Cursos</option>
+                {% for curso in cursos %}
+                    <option value="{{ curso.id_curso }} ">{{curso.descripcion}} {{curso.seccion}}</option>
+                {% endfor %}                
+            </select>
+
+
+            <label for="id_inscripcion_asign">Inscripcion</label>
+            <select name="id_inscripcion_asign" id="id_inscripcion_asign">
+                <option value="" disabled selected>Alumnos</option>
+                {% for inscripcion in inscripciones %}
+                    <option value="{{ inscripcion.id_inscripcion }} ">{{inscripcion.id_alumno}}  {{inscripcion.id_inscripcion}}</option>
+                {% endfor %}                
+            </select>
+
+            <button type="submit" name="submit_button_id" class="submit-button" value="guardarAsignaciones" id="guardarAsignaciones">Guardar Asignaciones</button>
+        </div>
+
+        
+        <div id="formInscripciones" class="form-container" style="display: none">
+            <!-- Formulario de Inscripciones -->
+            <h3>Inscripciones</h3>
+
+            <label for="fecha_inscripcion">Fecha</label>
+            <input type="date" name="fecha_inscripcion" id="fecha_inscripcion">
+             
+             <label for="id_alumno_insc">Nombre y Carné del alumno</label> 
+             <select name="id_alumno_insc" id="id_alumno_insc">
+                 <option value="" disabled selected>Alumnos</option>
+                 {% for alumno in alumnos %}
+                     <option value="{{ alumno.id_alumno }} ">{{alumno.apellido}} {{alumno.nombre}}  {{alumno.id_alumno}}</option>
+                 {% endfor %}                
+             </select>
+ 
+             <label for="encargado">Encargado</label>
+             <select name="encargado" id="encargado">
+                 <option value="" disabled selected>Encargados</option>
+                 {% for encargado in encargados %}
+                     <option value="{{ encargado.id_encargado }} ">{{encargado.nombre}}  {{encargado.apellido}}</option>
+                 {% endfor %}                
+             </select>
+ 
+             <label for="id_pago_insc">Código de Pago</label>
+             <input type="text" name="id_pago_insc" id="id_pago_insc">
+ 
+             <label for="fecha_pago_insc">Fecha de Pago</label>
+             <input type="date" name="fecha_pago_insc" id="fecha_pago_insc">
+
+            <button type="submit" name="submit_button_id" class="submit-button" value="guardarInscripciones" id="guardarInscripciones">Guardar Inscripciones</button>
+        </div>
+        
+        <div id="formColegiaturas" class="form-container" style="display: none">
+            <!-- Formulario de Colegiaturas -->
+            <label for="fecha_colegiatura">Fecha</label>
+            <input type="date" name="fecha_colegiatura" id="fecha_colegiatura">
+
+            <label for="id_alumno_col">Nombre y Carné del alumno</label> 
+             <select name="id_alumno_col" id="id_alumno_col">
+                 <option value="" disabled selected>Alumnos</option>
+                 {% for alumno in alumnos %}
+                     <option value="{{ alumno.id_alumno }} ">{{alumno.apellido}} {{alumno.nombre}}  {{alumno.id_alumno}}</option>
+                 {% endfor %}                
+             </select>
+
+             <label for="id_inscripcion_col">Inscripción</label>
+             <select name="id_inscripcion_col" id="id_inscripcion_col">
+                <option value="" disabled selected>Alumnos</option>
+                {% for inscripcion in inscripciones %}
+                    <option value="{{ inscripcion.id_inscripcion }} ">{{inscripcion.id_alumno}}  {{inscripcion.id_inscripcion}}</option>
+                {% endfor %}                
+            </select>
+
+             <label for="id_pago_col">Código de Pago</label>
+             <input type="text" name="id_pago_col" id="id_pago_col">
+ 
+             <label for="fecha_pago_col">Fecha de Pago</label>
+             <input type="date" name="fecha_pago_col" id="fecha_pago_col">
+
+               
+             <button type="submit" name="submit_button_id" class="submit-button" value="guardarColegiaturas" id="guardarColegiaturas">Guardar Colegiaturas</button>
+        </div>
+    </form>
+    <a href="/admin" class="button-link">
+        <i class="fa-solid fa-house"></i>
+    </a>
+    <!-- Agrega tus scripts JavaScript para manejar la interacción del menú aquí -->
+    <script src="{{ url_for('static', filename='js/admin/inscripciones.js') }}"> </script>
+
+</body>
+</html>

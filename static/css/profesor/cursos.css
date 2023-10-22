@@ -1,0 +1,122 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); /* Fondo con degradado */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    background-color: #f5f5f5; /* Color de fondo */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin relleno externo */
+}
+
+/* Estilos para el título h1 */
+h1 {
+    text-align: center; /* Texto centrado */
+    margin-top: 0; /* Sin margen superior */
+    background-color: #333; /* Fondo del título */
+    text-align: center; /* Texto centrado */
+    padding: 16px; /* Relleno */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el título h2 */
+h2 {
+    width: 80%; /* Ancho del 80% del contenedor */
+    margin: auto; /* Centra el elemento horizontalmente */
+    text-align: center; /* Texto centrado */
+    background-color: #ee1818db; /* Fondo del título */
+    padding: 0px; /* Sin relleno */
+    color: #fff; /* Color del texto */
+}
+
+/* Contenedor centrado */
+.centered-container {
+    background-color: #78c9a061; /* Fondo del contenedor */
+    border: 1px solid #24d93a; /* Borde del contenedor */
+    display: flex; /* Contenedor de tipo flex */
+    flex-direction: column; /* Columna principal */
+    align-items: center; /* Contenido centrado horizontalmente */
+    text-align: center; /* Texto centrado */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Márgenes superior e inferior */
+    padding: 20px; /* Relleno interior */
+}
+
+/* Estilos para etiquetas y selectores dentro del contenedor centrado */
+.centered-container label,
+.centered-container select {
+    margin: 10px 0; /* Márgenes superiores e inferiores */
+}
+
+
+/* Estilos para etiquetas */
+label {
+    display: block; /* Elemento de bloque */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para selectores */
+select {
+    width: 90%; /* Ancho del 90% del contenedor */
+    padding: 10px; /* Relleno interior */
+    margin: auto; /* Centra el elemento horizontalmente */
+    margin-bottom: 20px; /* Márgenes inferiores */
+    border: 1px solid #e12323; /* Borde del selector */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para la tabla de Profesores y Cursos */
+table {
+    width: 80%; /* Ancho del 80% del contenedor */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+}
+
+/* Estilos para celdas de tabla (th y td) */
+table, th, td {
+    border: 1px solid #d74141; /* Borde de las celdas de la tabla */
+}
+
+th, td {
+    padding: 10px; /* Relleno interior de celdas */
+    text-align: center; /* Texto centrado en celdas */
+}
+
+/* Estilos para encabezados de tabla (th) */
+th {
+    background-color: #f2f2f2; /* Fondo de encabezados */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para filas pares de la tabla */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo de filas pares */
+}
+
+/* Estilos para enlaces de botones */
+.button-link {
+    display: inline-block; /* Elemento en línea con relleno */
+    background-color: #da4519; /* Fondo del enlace */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Relleno del enlace */
+    text-decoration: none; /* Sin subrayado de enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 20px; /* Distancia superior */
+    left: 20px; /* Distancia izquierda */
+}
+
+/* Estilos para íconos dentro de enlaces de botones */
+.button-link i {
+    margin-right: 5px; /* Margen a la derecha del ícono */
+}
+
+/* Estilos para el botón al pasar el mouse */
+.button-link:hover {
+    background-color: #981d07; /* Fondo al pasar el ratón */
+}
+
+/* Estilos para párrafos */
+p {
+    margin: 20px auto; /* Márgenes superior e inferior, centrado horizontalmente */
+    max-width: 600px; /* Ancho máximo del párrafo */
+    color: #555; /* Color del texto */
+}

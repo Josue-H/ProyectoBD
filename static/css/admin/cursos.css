@@ -1,0 +1,98 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/* Estilos generales */
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #5E6472;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con transparencia al 20% */
+}
+/*     */
+/* Estilos para el formulario dentro del contenedor */
+
+
+/* Estilos para los campos de entrada */
+input[type="text"], select {
+    display: block;
+    margin: 10px ;
+    padding: 10px; /* Espacio interno para el contenido */
+    width: 100%; /* Ancho completo */
+    border: 1px solid #5E6472; /* Borde de color #5E6472 */
+    border-radius: 5px; /* Bordes redondos */
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco con transparencia al 20% */
+    color: #5E6472; /* Color del texto */
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+    font-weight: bold; /* Texto en negrita */
+    color: #5E6472; /* Color del texto */
+}
+
+/* Estilos para el botón de "Crear Curso" */
+.submit-button {
+    background-color: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondos */
+    padding: 10px 20px; /* Espacio interno para el contenido */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para el botón cuando está deshabilitado */
+.submit-button[disabled] {
+    background-color:rgb(243, 56, 187); /* Color de fondo gris cuando está deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando está deshabilitado */
+}
+
+/* Estilos adicionales al pasar el mouse por encima del botón */
+.submit-button:hover {
+    background-color:#f00; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.button-link {
+    display: block; /* Hace que el enlace sea un elemento de bloque */
+    background-color: rgb(117, 150, 187); /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    padding: 10px 20px; /* Espacio interno para el contenido */
+    text-decoration: none; /* Quita la decoración de subrayado del enlace */
+    border-radius: 10px; /* Bordes redondos */
+    position: absolute; /* Coloca el elemento de forma absoluta en la página */
+    top: 25px; /* Distancia desde la parte inferior de la página */
+    left: 10px; /* Distancia desde la izquierda de la página */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    z-index: 1;
+}
+
+/* Estilos adicionales al pasar el mouse por encima del botón */
+.button-link:hover {
+    background-color: rgb(252, 151, 151); /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.button-select{
+
+    background-color: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondos */
+    padding: 10px 20px; /* Espacio interno para el contenido */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}

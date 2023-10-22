@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/cursos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Administración de Cursos</title>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Administración de Cursos</h1>
+        <div class="menu">
+            <button id="btnCrear" class="button-select">Crear curso</button>
+            <button id="btnAsignar" class="button-select">Asignar curso</button>
+        </div>
+        <form method="POST" action="/admin/cursos">
+            <div id="formCrear" class="form-container" style="display: none;">
+                <label for="codigo-curso">Código del Curso:</label>
+                <input type="text" name="id_curso"  pattern="[0-9]{8}">
+
+
+                <label for="descripcion-curso">Descripción del Curso:</label>
+                <input type="text" name="descripcion_curso" ></input type="text">
+
+                <label for="grado">Grado</label>
+                <select name="grado" id="gradoSelect" >
+                    <option value="" disabled selected>Seleccione un grado</option>
+                    {% for grado in grados %}
+                        <option value=" {{grado.id_grado}}">{{grado.descripcion}}</option>
+                    {% endfor %}
+                </select>
+
+
+                <button type="submit" id="crear_curso" name="submit-button" value="crear_curso" class="submit-button">Crear Curso</button>
+            </div>
+
+            <div id="formAsignar" class="form-container" style="display: none">
+                <label for="profesor">Profesor</label>
+                <select name="profesor" id="profesorSelect" >
+                    <option value="" disabled selected>Selecciona un profesor</option>
+                    {% for profesor in profesores %}
+                        <option value="{{ profesor.id_profesor }}">{{profesor.nombre }} {{profesor.apellido}}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="curso">Curso  </label>
+                <select name="curso" id="cursoSelect">
+                    <option value="" disabled selected>Seleccione un curso</option>
+                    {% for curso in cursos %}
+                        <option value="{{curso.id_curso}}">{{ curso.descripcion}}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="seccion">Sección</label>
+                <input type="text" name="seccion" id="seccion" pattern="[A-Z]{1}">
+
+                <button type="submit" id="asignar_curso" name="submit-button" value="asignar_curso" class="submit-button">Asignar Curso</button>
+              
+            </div>
+        </form>
+        <a href="/admin" class="button-link">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <script src="{{ url_for('static', filename='js/admin/cursos.js') }}"></script>
+    </div>
+</body>
+</html> 

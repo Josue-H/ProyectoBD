@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/notas.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Administrar Notas</h1>
+
+    <!-- Formulario para elegir acción (ver o añadir notas) -->
+    <form id="accionForm">
+        <label for="accionSelect">Seleccione una acción:</label>
+        <select id="accionSelect">
+            <option value=""  selected>Seleccione una acción</option>
+            <option value="ver">Ver Notas</option>
+            <option value="anadir">Añadir Notas</option>
+        </select>
+    </form>
+
+    <!-- Formulario para ver notas -->
+    <form id="verNotasForm" style="display: none;">
+        <label for="alumnoSelect">Seleccione un alumno:</label>
+        <select id="alumnoSelect" name="alumnoSelect">
+            <option value="" selected >Seleccione un alumno</option>
+            {% for alumno in alumnos %}
+                 <option value="{{ alumno.id_alumno }}">{{ alumno.nombre }}</option>
+             {% endfor %} 
+        </select>
+
+        <!-- Aquí mostrarás las notas cargadas con AJAX -->
+        <div id="notasContainer"></div>
+    </form>
+
+    <!-- Formulario para añadir notas -->
+    <form id="anadirNotasForm" style="display: none;">
+        <label for="alumnoSelectAnadir">Seleccione un alumno:</label>
+        <select id="alumnoSelectAnadir" required>
+            <option value="" selected disabled>Seleccione un alumno</option>
+            {% for alumno in alumnos %}
+                 <option value="{{ alumno.id_alumno }}">{{ alumno.nombre }}</option>
+             {% endfor %} 
+        </select>
+
+        <label for="cursoSelectAnadir">Seleccione un curso:</label>
+        <select id="cursoSelectAnadir" required>
+            <option value="" selected >Selecciona un curso</option>
+            <!-- Opciones de cursos se cargarán dinámicamente con AJAX -->
+        </select>
+
+        <label for="notaInput">Nota:</label>
+        <input type="text" id="notaInput"  required>
+        <button type="button" id="guardarNota">Guardar Nota</button>
+    </form>
+
+    <a href="/admin" class="button-link">
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='js/admin/notas.js') }}"></script>
+</body>
+</html>

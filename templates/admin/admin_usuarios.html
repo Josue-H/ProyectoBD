@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/usuarios.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Administración de Usuarios</title>
+</head>
+<body>
+    <a href="/admin" class="button-link">
+        <i class="fa-solid fa-house"></i>
+    </a>
+    <div class="admin-container">
+        <h1>Administración de Usuarios</h1>
+        
+        <form method="POST" action="/admin/usuarios">
+            <label for="id-usuario">Código Usuario:</label>
+            <input type="text" name="id_usuario" required pattern="[0-9]{3,10}" title="Ingresa solo números">            
+
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" required>
+
+            <div class="input-item">
+                <label for="Contraseña">Contraseña:</label>
+                <input type="password" class="form-input" name="contraseña" placeholder="Contraseña" id="pwd" required>
+                
+                <i id="eye" class="fas fa-eye"></i>
+                <label for="mostrar">Mostrar Contraseña</label>
+            </div>
+
+            <label for="rol">Rol:</label>
+            <select name="rol" id="rolSelect" required>
+                <option value="" disabled selected>Selecciona un rol</option>
+                {% for rol in roles %}
+                    <option value="{{ rol.id_rol }}">{{ rol.descripcion }} {{ rol.id_rol }}</option>
+                {% endfor %}
+            </select>
+            <div id="administrador-form" class="user-form" style="display: none">
+                <!-- Contenido del formulario de administrador -->
+                <h3>Administrador</h3>
+
+                <label for="id_administrador">Código Administrador:</label>
+                <input type="text" name="id_administrador" id="id_administrador"  pattern="[0-9]{8,20}" title="Ingresa solo números">
+
+                <label for="nombre_admin">Nombre</label>
+                <input type="text" name="nombre_admin" id="nombre_admin" >
+
+                <label for="apellido_admin">Apellido</label>
+                <input type="text" name="apellido_admin" id="apellido_admin" >
+                
+                <button type="submit" id="admin-submit-button" class="submit-button">Crear Usuario</button>
+            </div>
+
+            <div id="alumno-form" class="user-form" style="display: none">
+                <h3>Alumno</h3>
+                <!-- Contenido del formulario de alumno -->
+                <label for="id_alumno">Código Alumno:</label>
+                <input type="text" name="id_alumno" id="id_alumno"  pattern="[0-9]{8,20}" title="Ingresa solo números"> 
+
+                <label for="nombre_alumno"> Nombre</label>
+                <input type="text" name="nombre_alumno" id="nombre_alumno" >
+
+                <label for="apellido_alumno">Apellido</label>
+                <input type="text" name="apellido_alumno" id="apellido_alumno" >
+
+                <label for="fecha_nac_alum">Fecha de nacimiento</label>
+                <input type="date" name="fecha_nac_alum" id="fecha_nac_alum" >
+
+                <label for="genero">Género</label>
+                <select name="genero" id="genero" >
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+                
+                <button type="submit" id="alumno-submit-button" class="submit-button">Crear Usuario</button>
+            </div>
+
+            <div id="profesor-form" class="user-form" style="display: none">
+                <h3>Profesor</h3>
+                <!-- Contenido del formulario de profesor -->
+                <label for="id_profesor">Código Profesor:</label>
+                <input type="text" name="id_profesor" id="id_profesor">
+
+                <label for="nombre_profesor">Nombre</label>
+                <input type="text" name="nombre_profesor" id="nombre_profesor">
+
+                <label for="apellido_profesor">Apellido</label>
+                <input type="text" name="apellido_profesor" id="apellido_profesor">
+
+                <label for="profesion">Profesión</label>
+                <input type="text" name="profesion" id="profesion">
+                
+                <button type="submit" id="submit-button" class="submit-button">Crear Usuario</button>
+            </div>
+
+            <div id="encargado-form" class="user-form" style="display: none">
+                <h3> Encargado</h3>
+
+                <label for="id_encargado">Código Encargado</label>
+                <input type="text" name="id_encargado" id="id_encargado" pattern="[0-9]{8,20}" title="Ingresa solo números">
+
+                <label for="nombre_encargado">Nombre</label>
+                <input type="text" name="nombre_encargado" id="nombre_encargado">
+
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" pattern="[0-9]{8}" title="ingresa número telefónico" >
+
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion">
+
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo">
+
+                <button type="submit" id="submit-button" class="submit-button">Crear Usuario</button>
+            </div>
+
+        </form>
+
+        <script src="{{ url_for('static', filename='js/view_pass.js') }}"> </script>
+        <script src="{{ url_for('static', filename='js/admin/usuarios.js') }}"></script>
+    </div>
+</body>
+</html>

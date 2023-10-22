@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <form class="con" action="/login" method="POST">
+        <header>
+            <h2>Iniciar Sesión</h2>
+            <p>Por favor, inicia sesión para acceder.</p>
+        </header>
+        <div class="input-item">
+            <span class="input-item">
+                <i class="fa fa-user-circle"></i>
+              </span>
+            <input type="text" class="form-input" name="username" placeholder="Nombre de Usuario" required>
+        </div>
+        <div class="input-item">
+            <span class="input-item">
+                <i class="fa fa-key"></i>
+               </span>
+            <input type="password" class="form-input" name="password" placeholder="Contraseña" id="pwd" required>
+            <i id="eye" class="fas fa-eye"></i>
+        </div>
+        <div class="submits">
+            <button type="submit" class="sign-up">Iniciar Sesión</button>
+        </div>
+    </form>
+    <script src="{{ url_for('static', filename='js/view_pass.js') }}"> </script>
+</body>
+</html>

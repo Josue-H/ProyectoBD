@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/profesor/cursos.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Ver Cursos</title>
+    </head>
+    <body>
+        <h1>Cursos del Profesor</h1>
+        <form method="GET">
+            <label for="curso_id">Selecciona un curso:</label>
+            <select name="curso_id" id="cursoSelect">
+                <option value="" selected>Tus cursos</option>
+                {% for curso in cursos %}
+                    <option value="{{ curso.id_curso }}">{{ curso.descripcion }} {{curso.id_curso}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="seccion">Filtrar por sección:</label>
+            <select name="seccionFilter" id="seccionFilter">
+                <option value="">Selecciona una sección</option>
+            </select>
+    
+        </form>
+
+        <h2>Alumnos del Curso</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alumno</th>
+                    <th>Grado</th>
+                    <th>Sección</th>
+                </tr>
+            </thead>
+            <tbody id="alumnosList">
+                <!-- Datos se cargarán dinámicamente con AJAX -->
+            </tbody>
+        </table>
+        <a href="/profesor" class="button-link">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <script src="{{ url_for('static', filename='js/profesor/cursos.js') }}"></script>
+    </body>
+
+</html>

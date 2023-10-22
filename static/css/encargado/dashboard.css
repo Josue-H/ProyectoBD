@@ -1,0 +1,109 @@
+.a {
+    display: inline-block; /* Hace que el enlace sea un bloque en línea */
+    background-color: #da4519; /* Establece el color de fondo del enlace */
+    color: #fff; /* Establece el color del texto del enlace en blanco (#fff) */
+    padding: 10px 20px; /* Agrega relleno de 10 píxeles verticalmente y 20 píxeles horizontalmente al enlace */
+    text-decoration: none; /* Elimina la decoración de texto subrayado en el enlace */
+    border-radius: 5px; /* Aplica un radio de borde de 5 píxeles, dando esquinas redondeadas al enlace */
+    position: absolute; /* Establece la posición absoluta para el enlace */
+    top: 20px; /* Establece la distancia superior de 20 píxeles desde el borde superior */
+    left: 20px; /* Establece la distancia izquierda de 20 píxeles desde el borde izquierdo */
+}
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); /* Fondo degradado */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    background-color: #f5f5f5; /* Color de fondo */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin relleno externo */
+}
+
+h1 {
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ancho del 80% del contenedor */
+    margin-top: 0; /* Sin margen superior */
+    background-color: #333; /* Fondo del título */
+    padding: 16px; /* Relleno */
+    color: #fff; /* Color del texto */
+}
+
+
+
+label {
+    display: block; /* Elemento de bloque */
+    font-weight: bold; /* Texto en negrita */
+}
+
+select {
+    width: 20%; /* Ancho del 20% del contenedor */
+    padding: 8px; /* Relleno interior */
+    margin: auto; /* Centra el elemento horizontalmente */
+    margin-bottom: 20px; /* Márgenes inferiores */
+    border: 1px solid #ee1818db; /* Borde del selector */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+table {
+    width: 80%; /* Ancho del 80% del contenedor */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+}
+
+table, th, td {
+    border: 1px solid #d74141; /* Borde de las celdas de la tabla */
+}
+
+th, td {
+    padding: 10px; /* Relleno interior de celdas */
+    text-align: center; /* Texto centrado en celdas */
+}
+
+th {
+    background-color: #ee1818db; /* Fondo de encabezados */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color de texto en los encabezados */
+    font-size: 25px; /* Tamaño de fuente de encabezados */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6b8b8; /* Fondo de filas pares */
+}
+
+.open-menu {
+    display: inline-block; /* Elemento en línea */
+    background-color: #da4519; /* Fondo del botón */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    position: absolute; /* Posición absoluta */
+    top: 20px; /* Ubicación superior */
+    left: 20px; /* Ubicación izquierda */
+}
+
+.open-menu:hover {
+    background-color: #981d07; /* Cambio de color de fondo al pasar el mouse */
+}
+
+.open-menu i {
+    margin-right: 5px; /* Margen a la derecha del ícono */
+}
+
+p {
+    margin: 20px auto; /* Márgenes superior e inferior, centrado horizontalmente */
+    max-width: 600px; /* Ancho máximo del párrafo */
+    color: #555; /* Color del texto */
+}
+
+@media (max-width: 768px) {
+    select {
+        width: 20%; /* Ancho del 100% para ocupar todo el ancho de la pantalla */
+    }
+    
+    table {
+        width: 100%; /* Hacer que la tabla ocupe todo el ancho de la pantalla */
+    }
+    
+    th {
+        font-size: 19px; /* Reduce el tamaño de fuente de los encabezados en pantallas más pequeñas */
+    }
+}

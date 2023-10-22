@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/encargado/dashboard.css') }}">
+    <title>Panel de Administración</title>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Bienvenido al Panel de Encargado, {{ current_user.usuario }}!</h1>
+        <p> {{ current_user.encargado.nombre }}</p>
+        <p id="">ID Administrador: {{ current_user.encargado.id_encargado }}</p>
+    </div>
+    <label for="alumnoSelect">Seleccionar Alumno:</label>
+<select id="alumnoSelect">
+    <option value="">Todos los alumnos</option>
+    {% for alumno in alumnos_asignados %}
+        <option value="{{ alumno.id_alumno }}">{{ alumno.alumno.nombre }} {{ alumno.alumno.apellido }}</option>
+    {% endfor %}
+</select>
+<table id="infoTable">
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Profesor</th>
+            <th>Nota</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<a class="a" href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+    <script src="{{ url_for('static', filename='js/encargado/dashboard.js') }}"></script>
+</body>
+</html>

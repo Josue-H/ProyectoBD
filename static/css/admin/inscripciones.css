@@ -1,0 +1,100 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/* Estilos generales */
+/* Estilo para el cuerpo de la página */
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el menú */
+.menu {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu button {
+    background-color: #2f7e38;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #777;
+}
+
+form {
+    background-color: #78c9a061; 
+    border: 1px solid #24d93a;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+label {
+    display: block; /* Hace que las etiquetas sean elementos en bloque */
+    margin-bottom: 5px; /* Agrega espacio (margen) en la parte inferior de las etiquetas */
+    font-weight: bold; /* Hace que el texto de la etiqueta sea negrita */
+}
+
+select, input {
+    width: 98%; /* Establece el ancho de los select e input al 100% de su contenedor */
+    padding: 10px; /* Agrega relleno de 10 píxeles alrededor del contenido de select e input */
+    margin-bottom: 15px; /* Agrega espacio (margen) en la parte inferior de select e input */
+    border: 1px solid #2f7e38; /* Agrega un borde de 1 píxel sólido con color gris claro (#ccc) a select e input */
+    border-radius: 5px; /* Aplica un radio de borde de 5 píxeles, dando esquinas redondeadas a select e input */
+}
+
+button {
+    background-color:#296e31; /* Establece el color de fondo del botón */
+    color: #fff; /* Establece el color del texto del botón en blanco (#fff) */
+    padding: 10px 20px; /* Agrega relleno de 10 píxeles verticalmente y 20 píxeles horizontalmente al botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Aplica un radio de borde de 5 píxeles, dando esquinas redondeadas al botón */
+    cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: #044e0c; /* Cambia el color de fondo del botón al pasar el mouse (#0056b3) */
+}
+
+#notasContainer {
+    margin-top: 20px; /* Agrega espacio en la parte superior de notasContainer */
+}
+
+.button-link {
+    display: inline-block; /* Hace que el enlace sea un bloque en línea */
+    background-color: #da4519; /* Establece el color de fondo del enlace */
+    color: #fff; /* Establece el color del texto del enlace en blanco (#fff) */
+    padding: 10px 20px; /* Agrega relleno de 10 píxeles verticalmente y 20 píxeles horizontalmente al enlace */
+    text-decoration: none; /* Elimina la decoración de texto subrayado en el enlace */
+    border-radius: 5px; /* Aplica un radio de borde de 5 píxeles, dando esquinas redondeadas al enlace */
+    position: absolute; /* Establece la posición absoluta para el enlace */
+    top: 20px; /* Establece la distancia superior de 20 píxeles desde el borde superior */
+    left: 20px; /* Establece la distancia izquierda de 20 píxeles desde el borde izquierdo */
+}
+
+.button-link i {
+    margin-right: 5px; /* Agrega espacio (margen) a la derecha del ícono del enlace */
+}
+
+.button-link:hover {
+    background-color: #981d07; /* Cambia el color de fondo del botón al pasar el mouse (#0056b3) */
+}
+
+p {
+    margin: 20px auto; /* Agrega espacio en la parte superior e inferior del párrafo y lo centra horizontalmente */
+    max-width: 600px; /* Establece el ancho máximo del párrafo en 600 píxeles */
+    color: #555; /* Establece el color del texto en gris oscuro (#555) */
+}
+
+/* Opcional: Estilos específicos para el icono si es necesario. Agrega tus estilos personalizados aquí. */

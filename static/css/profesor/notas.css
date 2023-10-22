@@ -1,0 +1,99 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/* Estilos generales */
+
+/* Estilo del cuerpo de la página */
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    font-family: Arial, sans-serif; /* Fuente del texto principal */
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+    margin: 0; /* Elimina los márgenes externos del cuerpo */
+    padding: 0; /* Elimina el relleno del cuerpo */
+}
+
+/* Estilo del formulario principal */
+form {
+    background-color: #78c9a061; /* Fondo del formulario */
+    border: 1px solid #24d93a; /* Borde del formulario */
+    padding: 20px; /* Relleno del formulario */
+    margin: 20px auto; /* Margen del formulario en el centro */
+    max-width: 600px; /* Ancho máximo del formulario */
+}
+
+/* Estilo de etiquetas */
+label {
+    display: block; /* Mostrar etiquetas como elementos de bloque */
+    margin-bottom: 5px; /* Margen en la parte inferior de las etiquetas */
+    font-weight: bold; /* Texto en negrita en las etiquetas */
+}
+
+/* Estilo de campos de entrada y selección */
+select, input {
+    width: 98%; /* Ancho al 100% del contenedor */
+    padding: 10px; /* Relleno alrededor de los campos de entrada y selección */
+    margin-bottom: 15px; /* Margen en la parte inferior de los campos */
+    border: 1px solid #2f7e38; /* Borde sólido de 1 píxel */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Estilo de botones */
+button {
+    background-color: #296e31; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    padding: 10px 20px; /* Relleno de los botones */
+    border: none; /* Sin borde en los botones */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambio de cursor al pasar sobre los botones */
+}
+
+/* Estilo del contenedor de notas */
+#notasContainer {
+    margin-top: 20px; /* Margen en la parte superior del contenedor de notas */
+}
+
+/* Estilo de enlaces de botones */
+.button-link {
+    display: inline-block; /* Mostrar enlaces de botones como elementos en línea */
+    background-color: #da4519; /* Color de fondo de los enlaces de botones */
+    color: #fff; /* Color del texto de los enlaces de botones */
+    padding: 10px 20px; /* Relleno de los enlaces de botones */
+    text-decoration: none; /* Sin subrayado en los enlaces de botones */
+    border-radius: 5px; /* Esquinas redondeadas */
+    position: absolute; /* Posición absoluta para los enlaces de botones */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
+}
+
+/* Estilo del encabezado h1 */
+h1 {
+    text-align: center; /* Centra el texto dentro del elemento h1 */
+    margin-top: 0; /* Elimina el espacio en la parte superior del elemento h1 */
+    background-color: #333; /* Color de fondo del elemento h1 */
+    padding: 16px; /* Relleno interno del elemento h1 */
+    color: #fff; /* Color del texto en el elemento h1 */
+}
+
+/* Estilo de enlaces de botones al pasar el mouse */
+.button-link i {
+    margin-right: 5px; /* Margen a la derecha del ícono del enlace de botón */
+}
+
+.button-link:hover {
+    background-color: #981d07; /* Color de fondo al pasar el mouse sobre los enlaces de botones */
+}
+
+/* Estilo de párrafos */
+p {
+    margin: 20px auto; /* Margen en la parte superior e inferior de los párrafos */
+    max-width: 600px; /* Ancho máximo de los párrafos */
+    color: #555; /* Color del texto de los párrafos */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    /* Ajustes de estilo para pantallas con un ancho máximo de 600px */
+    body {
+        font-size: 16px; /* Ajusta el tamaño de fuente */
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/dashboard.css') }}">
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-button-container">
+            <button class="open-menu" id="menu-button">☰</button>
+        </div>
+        <div class="menu-container">
+            <a href="/admin/usuarios">Administrar Usuarios</a>
+            <a href="/admin/cursos">Administrar Cursos</a>
+            <a href="/admin/inscripciones">Administrar Inscripciones</a>
+            <a href="/admin/notas">Administrar Notas</a>
+            <a href="/admin/profesores">Ver cursos </a>
+            <a class="cerrar-sesion"    href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Bienvenido al Panel de Administración</h1>
+        <p>Bienvenido, {{ current_user.usuario }}!</p>
+        <p> {{ current_user.administrador.nombre }}  {{ current_user.administrador.apellido }}</p>
+        <p>ID Administrador: {{ current_user.administrador.id_administrador }}</p>
+        <form class="hidden-form" method="POST" action="/admin/crear_grado">
+            <label for="id_grado">ID del Grado:</label>
+            <input type="text" id="id_grado" name="id_grado" class="styled-input" required>
+            <label for="descripcion">Descripción del Grado:</label>
+            <input type="text" id="descripcion" name="descripcion" required class="styled-input">
+            <button type="submit" class="styled-button">Crear Grado</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/admin/dashboard.js') }}"></script>
+</body>
+</html>

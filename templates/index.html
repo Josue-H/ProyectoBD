@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Bienvenidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/index.css') }}">
+  </head>
+
+<body>
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#">Las <em>Encinas</em></a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Inicio</a></li>
+        <li class="has-submenu"><a href="#section2">Sobre Nosotros</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">¿Quiénes somos?</a></li> 
+            <li><a href="#section4">Cursos/carreras:</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#section6">Contactanos</a></li>
+        <li><a href="{{ url_for('auth.login') }}" class="external">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename= 'assets/images/course-video.mp4') }} " type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h2>Forjando un Futuro <em>Brillante</em></h2>
+              <h6>Bienvenido a la Escuela Secundaria Las Encinas</h6>
+              <div class="main-button">
+                  <div class="scroll-to-section"><a href="#section2">Explora más</a></div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Mision y Vision</h4>
+                    <p>Misión<br>
+
+                      "Proporcionar una educación de alta calidad que inspire 
+                      a nuestros estudiantes a alcanzar su máximo potencial académico, personal y cívico. Nos esforzamos por
+                      crear un ambiente de aprendizaje inclusivo, seguro y estimulante, donde fomentamos la curiosidad, la 
+                      creatividad y el respeto mutuo. Nuestro compromiso es formar ciudadanos responsables, 
+                      con sólidos valores éticos, habilidades críticas y sociales para enfrentar los desafíos del mundo 
+                      actual y del futuro."<br><br>
+                      
+                      Visión<br>
+                      
+                      "Ser reconocidos como un referente en la educación secundaria, donde cada estudiante se sienta valorado 
+                      y empoderado para perseguir sus sueños. Buscamos ser una comunidad educativa innovadora que promueva la 
+                      excelencia académica, la equidad y la diversidad. Nuestra visión es la de formar líderes del mañana, con 
+                      una base sólida en conocimientos y habilidades, capaces de contribuir positivamente a sus comunidades y 
+                      al mundo en general. En Escuela Secundaria Encinas, creemos en el potencial ilimitado de cada estudiante 
+                      y estamos comprometidos a ayudarlos a alcanzar sus metas y ser ciudadanos comprometidos y éticos."</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Valores</h4>
+                    <p><b>Excelencia Académica:</b> Buscamos la excelencia en la enseñanza y el aprendizaje, promoviendo el 
+                      pensamiento crítico, la investigación y el desarrollo de habilidades que preparan a nuestros estudiantes
+                       para un futuro exitoso.</p> 
+                    <p><b>Responsabilidad y Ética:</b> Enseñamos y modelamos la responsabilidad, la integridad y la ética en 
+                      todas nuestras interacciones, fomentando ciudadanos comprometidos y conscientes de su impacto en 
+                      la sociedad.</p>
+                    <p><b>Colaboración y Comunidad:</b> Valoramos la colaboración entre estudiantes, padres, personal y la comunidad 
+                      en general. Creemos en la importancia de trabajar juntos para alcanzar metas comunes y fortalecer los 
+                      lazos en nuestra comunidad.</p> 
+                    <p><b>Creatividad e Innovación:</b> Fomentamos la creatividad y la innovación como motores del 
+                      progreso. Inspiramos a nuestros estudiantes a pensar de manera creativa, encontrar soluciones y adaptarse a 
+                      un mundo en constante evolución.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Actividades</h4>
+                    <p><b>Académicas:</b> Clases y Estudio, Clubes de Debate y Oratoria, Proyectos de Investigacion y Tutorías entre Estudiantes.</p>
+                    <p><b>Artísticas y Creativas:</b> Club de Arte, Club de Música, Teatro Escolar, Literatura Creativa.</p>
+                    <p><b>Deportivas y Recreativas:</b> Equipos Deportivos, Club de Deportes Recreativos, Días de Campo y Excursiones.</p>
+                    <p><b>Voluntariado y Servicio Comunitario:</b> Proyectos de Voluntariado, Clubes de Conciencia Social.</p>
+                    <p><b>Tecnológicas:</b> Clubes de Robótica, Programación y Codificación.</p>
+                    <p><b>Desarrollo Personal:</b> Talleres de Habilidades de Vida, Mentoría y Orientación Vocacional.</p>
+                    <p><b>Culturales y Celebraciones:</b> Fiestas y Celebraciones Escolares, Conciertos y Exhibiciones.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section courses" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Elige tus cursos</h2>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="down-content">
+              <h4>Marketing digital</h4>
+              <p> Conjunto de estrategias y tácticas de promoción y publicidad que se llevan a cabo en línea</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-03.png') }} " alt="Author 1">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Santiago Estrategias <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Mundo Empresarial</h4>
+              <p>Competencia constante, innovación, y la búsqueda de eficiencia y rentabilidad.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-02.png') }} "alt="Author 2">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Elena García<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Tecnología Multimedia</h4>
+              <p>Múltiples formas de medios, imágenes, audio y video, de manera integrada y sincrona.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-03.png') }} " alt="Author 3">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Alejandro Rodríguez<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Comunicaciones</h4>
+              <p>Fundamentos teóricos y prácticos de la comunicación en diversas formas y contextos.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-04.png') }} " alt="Author 4">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Keisha Johnson<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Ética en los Negocios</h4>
+              <p>Consideración de lo que es moralmente correcto e incorrecto en las actividades empresariales.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-05.png') }} " alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">John Smith<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Fotografia</h4>
+              <p>La fotografía es la creación de imágenes fijas o en movimiento al capturar la luz en un medio sensible detras de un lente.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-01.png') }} " alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Santiago Estrategias<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Desarollo web</h4>
+              <p>crear y mantener sitios web, aplicaciones o servicios en línea, utilizando programación.</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-02.png') }} " alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Elena García<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>curso HTML CSS</h4>
+              <p>HTML se emplea para estructurar el contenido web, mientras que CSS se usa para diseñar el aspecto visual</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-03.png') }} " alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Alejandro Rodríguez<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="down-content">
+              <h4>Social Media</h4>
+              <p>plataformas digitales que permiten la interacción y el intercambio de información entre usuarios en línea</p>
+              <div class="author-image">
+                <img src="{{ url_for('static', filename= 'assets/images/author-04.png') }} " alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Keisha Johnson<i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Continuemos en contacto</h2>
+          </div>
+        </div>
+        <div class="col-md-6">                    
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="nombre" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Correo electronico" required="">
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="tu mensaje..." required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="button">Dar comienzo</button>
+                </fieldset>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.696342244448!2d-90.8069038250494!3d14.67316638582187!
+                2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85896cc440ef5325%3A0xd853168abb5042a5!2sColegio%20Mesoamericano!5e0!3m2!1s
+                es!2sgt!4v1697866599787!5m2!1ses!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-copyright"></i> Copyright 2023 por universida Mariano Galvez 
+           <br>Propiedad de : <a href="#" rel="sponsored" target="_parent">Las Encinas</a></p>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>

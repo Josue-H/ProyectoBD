@@ -1,0 +1,120 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/* Estilos generales del cuerpo del documento */
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); /* Fondo degradado */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    background-color: #f5f5f5; /* Color de fondo */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilos para el título h1 */
+h1 {
+    text-align: center; /* Centra el texto dentro del elemento h1 */
+    margin-top: 0; /* Agrega espacio en la parte superior del elemento h1 */
+    background-color: #333; /* Color de fondo del encabezado h1 */
+    text-align: center; /* Centra el texto en el encabezado h1 */
+    padding: 16px; /* Agrega relleno alrededor del encabezado h1 */
+    color: #fff; /* Establece el color del texto del encabezado h1 en blanco (#fff) */
+}
+
+/* Contenedor centrado */
+.centered-container {
+    background-color: #78c9a061; 
+    border: 1px solid #24d93a;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    text-align: center; /* Centra el texto */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+}
+
+/* Estilos para etiquetas y selectores dentro del contenedor centrado */
+.centered-container label,
+.centered-container select {
+    margin: 10px 0; /* Espacio entre etiquetas y selectores */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor principal */
+    margin: 0 auto; /* Centra el contenedor principal horizontalmente */
+    padding: 20px; /* Espacio interior del contenedor */
+    background-color: #fff; /* Color de fondo del contenedor principal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor principal */
+}
+
+/* Estilos para etiquetas */
+label {
+    display: block; /* Muestra etiquetas como bloques */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para selectores */
+select {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    padding: 10px; /* Relleno interior del selector */
+    margin-bottom: 20px; /* Espacio entre selectores */
+    border: 1px solid #ccc; /* Borde del selector */
+    border-radius: 4px; /* Esquinas redondeadas del selector */
+}
+
+/* Estilos para la tabla de Profesores y Cursos */
+table {
+    width: 100%; /* Ancho del 100% de su contenedor */
+    border-collapse: collapse; /* Borde colapsado para la tabla */
+}
+
+/* Estilos para celdas de tabla (th y td) */
+table, th, td {
+    border: 1px solid #ccc; /* Borde de las celdas de tabla */
+}
+
+th, td {
+    padding: 10px; /* Relleno interior de celdas de tabla */
+    text-align: center; /* Centra el texto en las celdas */
+}
+
+/* Estilos para encabezados de tabla (th) */
+th {
+    background-color: #f2f2f2; /* Color de fondo de los encabezados de tabla */
+    font-weight: bold; /* Texto en negrita en los encabezados de tabla */
+}
+
+/* Estilos para filas pares de la tabla */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+/* Estilos para enlaces de botones */
+.button-link {
+    display: inline-block; /* Enlaces como bloques en línea */
+    background-color: #da4519; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en blanco (#fff) */
+    padding: 10px 20px; /* Relleno del botón */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    border-radius: 5px; /* Esquinas redondeadas del botón */
+    position: absolute; /* Posición absoluta para el botón */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
+}
+
+/* Estilos para íconos dentro de enlaces de botones */
+.button-link i {
+    margin-right: 5px; /* Espacio a la derecha del ícono del botón */
+}
+
+/* Estilos para el botón al pasar el mouse */
+.button-link:hover {
+    background-color: #981d07; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para párrafos */
+p {
+    margin: 20px auto; /* Espacio en la parte superior e inferior del párrafo y centrado horizontalmente */
+    max-width: 600px; /* Ancho máximo del párrafo */
+    color: #555; /* Color del texto en gris oscuro (#555) */
+}

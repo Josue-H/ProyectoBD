@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/profesores.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Administrar Profesores y Cursos</title>
+</head>
+<body>
+    <h1>Administrar Profesores y Cursos</h1>
+
+    <label for="profesor">Seleccione un profesor</label>
+    <select name="profesor" id="profesor">
+        <option value=""  selected>Seleccione un profesor</option>
+        {% for profesor in profesores %}
+            <option value="{{profesor.id_profesor}}">{{profesor.nombre}}  {{profesor.apellido}}</option>
+        {% endfor %}
+    </select>
+
+    <!-- Controles de filtro -->
+    <label for="gradoFilter">Filtrar por Grado:</label>
+    <select id="gradoFilter"> 
+        <option value="">Todos los Grados</option>
+        <!-- Opciones de grados se cargarán dinámicamente con AJAX -->
+    </select>
+
+    <label for="seccionFilter">Filtrar por Sección:</label>
+    <select id="seccionFilter">
+        <option value="">Todas las Secciones</option>
+        <!-- Opciones de secciones se cargarán dinámicamente con AJAX -->
+    </select>
+
+    <!-- Lista de Profesores y Cursos -->
+    <table>
+        <thead>
+            <tr>
+                <th>Profesor</th>
+                <th>Curso</th>
+                <th>Grado</th>
+                <th>Sección</th>
+            </tr>
+        </thead>
+        <tbody id="profesoresCursosList">
+            <!-- Datos se cargarán dinámicamente con AJAX -->
+        </tbody>
+    </table>
+    <a href="/admin" class="button-link">
+        <i class="fa-solid fa-house"></i>
+    </a>
+    <script src="{{ url_for('static', filename='js/admin/profesores.js') }}"></script>
+</body>
+</html>

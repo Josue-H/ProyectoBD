@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profesor/notas.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ingresar Notas</title>
+</head>
+<body>
+  
+    <h1>Ingresar Notas</h1>
+    <form method="POST">
+        <label for="curso_id">Selecciona un curso:</label>
+        <select name="curso_id" id="cursoSelect">
+            <option value="" selected>Tus cursos</option>
+            {% for asignacion in cursos_asignados %}
+                <option value="{{ asignacion.id_curso }}">{{ asignacion.curso.descripcion }} {{ asignacion.id_curso }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label for="alumno_id">Selecciona un alumno:</label>
+        <select name="alumno_id" id="alumnoSelect">
+            <option value="">Todos los alumnos</option>
+            
+        </select>
+
+
+        <br>
+
+        <label for="nota_valor">Valor de la nota:</label>
+        <input type="text" name="nota_valor" id="nota_valor">
+
+        <label for="nota-anterior" id="nota-anterior-label" style="display: none;">La nota ya ha sido ingresada</label>
+        <input id="nota-anterior-input" disabled style="display: none;"></input>
+        <br>
+
+        <button type="submit">Guardar Nota</button>
+        <a href="/profesor" class="button-link">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </form>
+    
+    <script src="{{ url_for('static', filename='js/profesor/notas.js') }}"></script>
+</body>
+</html>

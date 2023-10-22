@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profesor/dashboard.css') }}">
+    <title>Panel de Profesor</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-button-container">
+            <button class="open-menu" id="menu-button">☰</button>
+        </div>
+        <div class="menu-container">
+            <a href="/profesor/notas">Administrar Notas</a>
+            <a href="/profesor/cursos">Ver cursos </a>
+            <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Bienvenido al Panel de Profesor</h1>
+        <p>Bienvenido, {{ current_user.usuario }}!</p>
+        <p> {{ current_user.profesor.nombre }}  {{ current_user.profesor.apellido }}</p>
+        <p>ID Administrador: {{ current_user.profesor.id_profesor }}</p>
+    </div>
+    <script src="{{ url_for('static', filename='js/profesor/dashboard.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/alumno/dashboard.css') }}">
+    <title>Panel de Alumno</title>
+</head>
+<body>
+    <a class="a"  href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+    <div class="content">
+        <h1>Bienvenido al Panel de Alumno, {{ current_user.usuario }}</h1>
+        <p> {{ current_user.alumno.nombre }}  {{ current_user.alumno.apellido }}</p>
+        <p>ID Alumno: {{ current_user.alumno.id_alumno }}</p>
+    </div>
+
+    <label for="cursoSelect">Filtrar por curso:</label>
+    <select id="cursoSelect">
+        <option value="">Todos los cursos</option>
+        {% for curso_id, curso_desc in cursos.items() %}
+            <option value="{{ curso_id }}">{{ curso_desc }}</option>
+        {% endfor %}
+    </select>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Profesor</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asignacion in asignaciones %}
+            <tr data-curso="{{ asignacion.curso.id_curso }}">
+                <td>{{ asignacion.curso.descripcion }}</td>
+                <td>
+                    {{ asignacion.curso.asignaciones[0].profesor.nombre }} {{ asignacion.curso.asignaciones[0].profesor.apellido }}
+                </td>
+                <td>
+                    {% if asignacion.curso.nota %}
+                        {{ asignacion.curso.nota[0].nota }}
+                    {% else %}
+                        Nota no ingresada
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    </table>
+   
+    <script src="{{ url_for('static', filename='js/alumno/dashboard.js') }}"></script>
+</body>
+</html>
