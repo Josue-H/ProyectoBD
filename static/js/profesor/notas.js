@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const notaInput = document.getElementById("nota_valor");
     const notaAnteriorInput = document.getElementById("nota-anterior-input");
     const notaAnteriorLabel = document.getElementById("nota-anterior-label");
+    const notaBtn = document.getElementById("addNoteButton");
+
 
     cursoSelect.addEventListener("change", function () {
         const curso_id = this.value;
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Realiza una solicitud AJAX a la ruta específica para obtener la lista de alumnos
         fetch('/profesor/obtener_alumnos', {
             method: 'POST',
-            body: new URLSearchParams({
+            body: new URLSearchParams({ 
                 'curso_id': curso_id
             }),
             headers: {
@@ -66,12 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(notaData.nota);
             if (notaData.nota !== null) {
                 // Si el alumno tiene una nota asignada, muestra la nota y oculta el campo de entrada
+                notaBtn.disabled = true
                 notaInput.style.display = "none";
                 notaAnteriorInput.style.display = "block";
                 notaAnteriorLabel.style.display = "block"
                 notaAnteriorInput.value = notaData.nota;
             } else {
                 // Si el alumno no tiene una nota asignada, muestra el campo de entrada y oculta la nota anterior
+                notaBtn.disabled = false
                 notaInput.style.display = "block";
                 notaAnteriorLabel.style.display = "none"
                 notaAnteriorInput.style.display = "none";

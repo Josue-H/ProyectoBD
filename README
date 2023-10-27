@@ -1,0 +1,48 @@
+GABRIEL:
+        ARQUITECTURA DE LA APLICACIÓN 
+        CREACIÓN DE LOS MODELOS
+        DECORADORES
+
+MARIO:
+        CONSUMO DE RUTAS EN PLANTILLAS Y PETICIONES AJAX
+        DISEÑO UX/UI
+        VISTAS DE AUTENTICACIÓN
+        
+JOSUÉ:
+        CREACIÓN DE LA BASE DE DATOS
+        CREACIÓN DE LAS RUTAS 
+        CONEXIÓN BASE DE DATOS
+
+
+COMANDOS DE INSTALACIÓN DE LIBRERÍAS NECESARIAS PARA EL MANTENIMIENTO O DESARROLLO DE LA APLICACIÓN
+
+-INSTALAR EL DRIVER ODBC  17 PARA SQL SERVER 
+- COMANDOS NECESARIOS:
+        pip install flask
+        pip install alembic==1.12.0
+        pip install blinker==1.6.2
+        pip install click==8.1.7
+        pip install colorama==0.4.6
+        pip install Flask==2.3.3
+        pip install Flask-Login==0.6.2
+        pip install Flask-Migrate==4.0.5
+        pip install Flask-SQLAlchemy==3.1.1
+        pip install greenlet==2.0.2
+        pip install itsdangerous==2.1.2
+        pip install Jinja2==3.1.2
+        pip install Mako==1.2.4
+        pip install MarkupSafe==2.1.3
+        pip install pyodbc==4.0.39
+        pip install SQLAlchemy==2.0.21
+        pip install typing_extensions==4.8.0
+        pip install Werkzeug==2.3.7
+        Flask==2.3.3
+        Flask-SQLAlchemy==3.1.1
+        Mako==1.2.
+        Flask-Migrate==4.0.5
+
+
+
+
+
+    

@@ -2,7 +2,6 @@
 from functools import wraps #decoradores
 from flask import abort, current_app, request # gestión de peticiones al servidor
 from flask_login import current_user #gestión de inicios de sesión y permisos 
-# from models import usuario
 
 def admin_required(func):
     @wraps(func)

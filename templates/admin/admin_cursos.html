@@ -15,6 +15,9 @@
             <button id="btnAsignar" class="button-select">Asignar curso</button>
         </div>
         <form method="POST" action="/admin/cursos">
+            <div id="flash-messages" style="display: none">
+                {{ get_flashed_messages()|tojson|safe }}
+            </div>
             <div id="formCrear" class="form-container" style="display: none;">
                 <label for="codigo-curso">Código del Curso:</label>
                 <input type="text" name="id_curso"  pattern="[0-9]{8}">

@@ -12,13 +12,12 @@ def login():
         user = Usuario.query.filter_by(usuario=username).first()
 
         if user :
-           # print(user)
             if user.check_password(password):
                 login_user(user)
                 flash('Inicio de sesión exitoso', 'success')
                 # Obtener el rol del usuario
                 rol = user.get_rol()
-                print(f'Rol del usuario: {rol}')
+                # print(f'Rol del usuario: {rol}')
                 # Redirigir al usuario según su rol
                 if rol == 'administrador':
                     return redirect(url_for('admin_dashboard'))

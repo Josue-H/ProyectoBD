@@ -6,6 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const formAsignar = document.getElementById("formAsignar");
     const crearCursoButton = document.getElementById("crear_curso");
     const asignarCursoButton = document.getElementById("asignar_curso");
+    const flashMessages = document.getElementById("flash-messages");
+    // Función para mostrar mensajes flash en una ventana emergente de alerta
+    // Función para mostrar mensajes flash en alertas
+    function displayFlashMessage(message, type) {
+        alert(message);
+    }
+
+    // Escuchar mensajes flash y mostrarlos en alertas
+    fetch('/admin/cursos', {
+        method: 'GET',
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        if (data.success) {
+            displayFlashMessage("Operación exitosa", "success");
+        } else {
+            displayFlashMessage("Ocurrió un error", "error");
+        }
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+    
 
     // Función para comprobar si los campos del formulario activo están completos
     function isFormValid(activeForm) {

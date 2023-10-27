@@ -29,9 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const alumnoSeleccionado = alumnoSelectAnadir.value.trim() !== "";
         const cursoSeleccionado = cursoSelectAnadir.value.trim() !== "";
         const notaIngresada = notaInput.value.trim() !== "";
-
-        guardarNotaBtn.disabled = !(alumnoSeleccionado && cursoSeleccionado && notaIngresada);
+    
+        // Validar que la nota sea un número entre 0 y 100
+        const notaValue = parseFloat(notaInput.value);
+    
+        // Comprobar si la notaValue es un número válido y está en el rango 0-100
+        const isValidNota = !isNaN(notaValue) && notaValue >= 0 && notaValue <= 100;
+    
+        // Habilitar el botón si todas las condiciones se cumplen
+        guardarNotaBtn.disabled = !(alumnoSeleccionado && cursoSeleccionado && notaIngresada && isValidNota);
     }
+    
     // Variable para rastrear si ya existe una nota ingresada
     let notaIngresada = false;
 

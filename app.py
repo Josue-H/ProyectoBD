@@ -189,14 +189,23 @@ def admin_cursos():
         button_id = request.form['submit-button']
 
         if button_id == 'crear_curso':
-        
             id_curso = request.form.get('id_curso')
             descripcion = request.form.get('descripcion_curso')
             id_grado = request.form.get('grado')
-            new_course =  Curso(id_curso =id_curso, descripcion = descripcion, id_grado = id_grado)
-            db.session.add(new_course)
-            db.session.commit()
-            return redirect('/admin/cursos')
+
+            # Verificar si el código del curso ya existe en la base de datos
+            curso_existente = Curso.query.filter_by(id_curso=id_curso).first()
+
+            if curso_existente:
+                # El código del curso ya existe, mostrar un mensaje de error
+                flash('El código del curso ya está en uso. Ingrese uno diferente.', 'error')
+            else:
+                # El código del curso es único, guardar el curso en la base de datos
+                new_course = Curso(id_curso=id_curso, descripcion=descripcion, id_grado=id_grado)
+                db.session.add(new_course)
+                db.session.commit()
+                return redirect('/admin/cursos')
+            
         elif button_id == 'asignar_curso':
             cursos = Curso.query.all()
             id_profesor = request.form.get('profesor')
